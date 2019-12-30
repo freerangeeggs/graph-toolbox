@@ -1,0 +1,63 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "08501658-0d8d-4835-bc34-79fc57bdf8e2",
+    "name": "createFolder",
+    "friendlyName": "Create a folder",
+    "description": "Creates a folder in OneDrive for Business or SharePoint Online.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Brett McKenzie",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 8
+    },
+    "instanceNameFormat": "Create Folder \"$(folderName)\"",
+    "inputs": [
+        {
+            "name": "tenantId",
+            "type": "string",
+            "label": "Tenant Id",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A sample string"
+        },
+        {
+            "name": "clientId",
+            "type": "string",
+            "label": "Client Id",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A sample string"
+        },
+        {
+            "name": "clientSecret",
+            "type": "string",
+            "label": "Client Secret",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A sample string"
+        },
+        {
+            "name": "driveId",
+            "type": "string",
+            "label": "Drive Id",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The Microsoft Graph DriveItem Id."
+        },
+        {
+            "name": "folderName",
+            "type": "string",
+            "label": "Folder Name",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "The name of the folder you wish to create."
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}

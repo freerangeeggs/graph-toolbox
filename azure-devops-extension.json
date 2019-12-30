@@ -1,0 +1,40 @@
+{
+    "manifestVersion": 1,
+    "id": "graph-toolbox",
+    "publisher": "brettmckenzie",
+    "version": "1.0.0",
+    "name": "Graph Toolbox",
+    "description": "MS Graph toolbox for Azure DevOps",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "files": [
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "dist",
+            "addressable": false
+        }
+    ],
+    "contributions": [
+        {
+            "id": "create-folder-v1",
+            "name": "Create a folder",
+            "type": "ms.vss-distributed-task.task",
+            "description": "Creates a folder in OneDrive for Business or SharePoint Online.",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "dist/tasks/create-folder/v1"
+            }
+        }
+    ]
+}

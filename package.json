@@ -1,0 +1,37 @@
+{
+  "name": "graph-toolbox",
+  "version": "1.0.0",
+  "description": "MS Graph toolbox for Azure DevOps",
+  "keywords": [
+    "extensions",
+    "Azure DevOps",
+    "Visual Studio Team Services"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "clean": "./node_modules/bin/rimraf ./dist",
+    "ri": "npm-recursive-install",
+    "build": "tsc --outDir \"./dist\" --sourceMap false && copyfiles -u 1 src/**/task.json dist && copyfiles -u 1 src/**/package.json dist",
+    "build:dev": "tsc -w --outDir \"./dist\" --sourceMap true",
+    "postbuild": "npm-recursive-install --rootDir=./dist",
+    "package-extension": "tfx extension create --manifests azure-devops-extension.json"
+  },
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^2.0.0",
+    "axios": "^0.19.0",
+    "azure-pipelines-task-lib": "^2.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "@types/q": "^1.5.2",
+    "copyfiles": "^2.1.1",
+    "recursive-install": "^1.4.0",
+    "rimraf": "~2.6.2",
+    "tfx-cli": "^0.6.3",
+    "typescript": "^3.7.2"
+  }
+}
