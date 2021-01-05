@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@microsoft/microsoft-graph-client": "^2.0.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "azure-pipelines-task-lib": "^2.9.3"
   },
   "devDependencies": {
