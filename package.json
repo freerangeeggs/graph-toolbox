@@ -21,17 +21,17 @@
     "package-extension": "tfx extension create --manifests azure-devops-extension.json"
   },
   "dependencies": {
-    "@microsoft/microsoft-graph-client": "^2.0.0",
+    "@microsoft/microsoft-graph-client": "^2.2.1",
     "axios": "^0.21.1",
-    "azure-pipelines-task-lib": "^2.9.3"
+    "azure-pipelines-task-lib": "^3.1.5"
   },
   "devDependencies": {
-    "@types/node": "^12.12.14",
-    "@types/q": "^1.5.2",
-    "copyfiles": "^2.1.1",
-    "recursive-install": "^1.4.0",
-    "rimraf": "~2.6.2",
-    "tfx-cli": "^0.6.3",
-    "typescript": "^3.7.2"
+    "@types/node": "^16.4.0",
+    "@types/q": "^1.5.5",
+    "copyfiles": "^2.4.1",
+    "recursive-install": "^1.0.1",
+    "rimraf": "~3.0.2",
+    "tfx-cli": "^0.6.4",
+    "typescript": "^4.3.5"
   }
 }
